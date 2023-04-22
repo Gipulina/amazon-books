@@ -30,13 +30,12 @@ const BookList = () => {
   return (
     <div>
       <h1>Amazon Book List</h1>
+      <EventExamples/>
       <section className="booklist">
         {newBooks.map((book) => {
-          const { image, title, author, id } = book;
-          const key= {id};
           return (
-            <div>
-              <Book book={book} key={id} />
+            <div key={book.id}> 
+              <Book book={book}  />
             </div>
           );
         })}
@@ -45,6 +44,23 @@ const BookList = () => {
   );
 };
 
+const EventExamples = () =>{
+  const handleFormInput = () =>{
+    console.log('handle form input');
+  };
+  const handleButtonClick = () =>{
+    alert('handle form input');
+  };
+  return (
+    <section>
+      <h2>Typical Form</h2>
+      <form>
+        <input type="text" name='example' onChange={handleFormInput} style={{  margin: '1rem 0'}}/>
+      </form>
+      <button onClick={handleButtonClick}>Click me </button>
+    </section>
+  );
+};
 const Book = (props) => {
   const { image, title, author } = props.book;
 return(
