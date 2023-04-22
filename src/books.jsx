@@ -7,9 +7,7 @@ const BookList = () =>{
         <Book/>
         <Book/>
         <Book/>
-        <Book/>
-        <Book/>
-    </section> 
+   </section> 
 }
 
 const Book = () =>{
@@ -25,5 +23,5 @@ const Title = () => <h2>Book Title </h2>;
 const Author = () => {
     return <h4> Author </h4>;
 };
-const root = ReactDom.createRoot(document.getElementById('root'));
-root.render(<Book/>);
+    const root = ReactDom.createRoot(document.getElementById('root'));
+    root.render(<Booklist/>);
